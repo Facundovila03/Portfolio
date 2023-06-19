@@ -1,0 +1,35 @@
+.container {
+  margin: 10%;
+  margin-left: 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.welcome {
+  width: 52rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.backgroundClip {
+  background: var(--accent2);
+  height: auto;
+  width: fit-content;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.backgroundClip span {
+  font-size: 15rem;
+  font-family: "Foldit", cursive;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  margin-bottom: 0px;
+}
+
+.container p {
+  width: 95%;
+  font-size: var(--desktop-L);
+}

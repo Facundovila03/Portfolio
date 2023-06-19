@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Foldit&family=Rubik&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
@@ -12,6 +14,24 @@
     rgba(15, 25, 60, 1) 0%,
     rgba(10, 17, 41, 0.7) 100%
   );
+
+  --desktop-4XL: 5.787rem;
+  --desktop-3XL: 4.341rem;
+  --desktop-2XL: 3.257rem;
+  --desktop-XL: 2.443rem;
+  --desktop-L: 1.833rem;
+  --desktop-M: 1.375rem;
+  --desktop-S: 1.031rem;
+  --desktop-XS: 0.774rem;
+
+  --mobile-4XL: 4.209rem;
+  --mobile-3XL: 3.158rem;
+  --mobile-2XL: 2.369rem;
+  --mobile-XL: 1.777rem;
+  --mobile-L: 1.333rem;
+  --mobile-M: 1rem;
+  --mobile-S: 0.75rem;
+  --mobile-XS: 0.563rem;
 }
 
 :root {

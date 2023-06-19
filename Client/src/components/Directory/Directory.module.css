@@ -1,0 +1,21 @@
+.container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 28px;
+  border-top: 0.625rem solid var(--accent1);
+  border-bottom: 0.625rem solid var(--accent1);
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 7.4rem;
+}
+
+.container p {
+  margin: 2rem 0;
+  width: fit-content;
+  align-self: center;
+}
