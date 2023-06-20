@@ -1,0 +1,15 @@
+.container {
+  background-color: transparent;
+  border: 0px;
+  color: var(--text);
+  font-size: var(--desktop-L);
+  font-family: "Rubik", sans-serif;
+  border-bottom: 0px;
+  transition: border-bottom 200ms;
+  padding: 0.938rem 2.188rem;
+}
+.container:hover {
+  border-bottom: 3px solid var(--accent1);
+  transition: border-bottom 200ms;
+  cursor: pointer;
+}

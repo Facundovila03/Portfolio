@@ -10,6 +10,7 @@
   width: 52rem;
   display: flex;
   flex-direction: column;
+  margin-right: 10%;
 }
 
 .backgroundClip {
