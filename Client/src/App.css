@@ -6,8 +6,16 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  overflow: auto;
-  overflow-x: auto;
   color: var(--text);
   font-family: "Rubik", sans-serif;
+  position: relative;
+}
+
+.blur {
+  border-radius: 50%;
+  background-color: var(--accent1);
+  width: 80%;
+  height: 3rem;
+  filter: blur(50px);
+  align-self: center;
 }
