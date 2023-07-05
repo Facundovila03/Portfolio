@@ -23,18 +23,20 @@
   z-index: 2;
   border-radius: 50%;
   box-shadow: 0px -10px 50px 0px #0f193c;
+  position: absolute;
+  top: -10.125rem;
 }
 
 .about {
   font-size: var(--desktop-L);
-  background-color: #0f193c;
+  background-color: #0b132d;
   z-index: 1;
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 11.626rem 0rem 3rem;
-  position: absolute;
-  top: 10.125rem;
+  padding: 9.626rem 0rem 3rem;
+  position: relative;
+  /* top: 10.125rem; */
 }
 
 .about span {

@@ -1,6 +1,7 @@
 import "./App.css";
 import NavBar from "./components/Navbar/NavBar";
 import About from "./views/About/About";
+import Skills from "./views/Skills/Skills";
 import Welcome from "./views/Welcome/Welcome";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <span className="blur">c</span>
       <NavBar />
       <About />
+      <Skills/>
     </div>
   );
 }

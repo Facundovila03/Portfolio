@@ -1,0 +1,22 @@
+.container {
+  background-color: var(--background);
+  height: 9.563rem;
+  width: 15.063rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  justify-self: center;
+  z-index: 3;
+}
+
+.title {
+  font-size: var(--desktop-M);
+  color: var(--accent2);
+}
+
+.description {
+  font-size: var(--desktop-S);
+  text-align: center;
+}
