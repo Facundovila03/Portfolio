@@ -1,7 +1,7 @@
-const express = require("express");
-const { getAllSkills } = require("../controllers/skills");
-const router = express.Router();
+import { Router } from "express";
+import getAllSkills from "../controllers/skills.js";
+const router = Router();
 
 router.get("/skills", getAllSkills);
 
-module.exports = router;
+export default router;

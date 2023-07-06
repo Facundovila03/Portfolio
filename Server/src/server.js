@@ -1,11 +1,12 @@
-require("dotenv").config();
-const express = require("express");
+import dotenv from "dotenv";
+dotenv.config();
+import express, { json } from "express";
 const server = express();
-const cookieParser = require("cookie-parser");
-const bodyParser = require("body-parser");
-const morgan = require("morgan");
-const router = require("../Routes/index");
-const { createHttpError, isHttpError } = require("http-errors");
+import cookieParser from "cookie-parser";
+import bodyParser from "body-parser";
+import morgan from "morgan";
+import router from "../Routes/index.js";
+import { isHttpError } from "http-errors";
 
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 server.use(bodyParser.json({ limit: "50mb" }));
@@ -25,10 +26,11 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use(express.json());
+server.use(json());
 
 server.use("/", router);
 
+// eslint-disable-next-line no-unused-vars
 server.use((error, req, res, next) => {
   console.error(error);
   let errorMessage = "Unknown error ocurred";
@@ -40,4 +42,4 @@ server.use((error, req, res, next) => {
   res.status(statusCode).json({ error: errorMessage });
 });
 
-module.exports = server;
+export default server;

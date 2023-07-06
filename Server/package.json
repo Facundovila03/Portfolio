@@ -8,6 +8,7 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.22"
   },
+  "type": "module",
   "scripts": {
     "start": "nodemon src/index.js"
   },
