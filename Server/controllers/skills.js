@@ -1,5 +1,5 @@
-const createHttpError = require("http-errors");
-const skillModel = require("../models/skills");
+import createHttpError from "http-errors";
+import skillModel from "../models/skills.js";
 
 const getAllSkills = async (req, res, next) => {
   try {
@@ -11,6 +11,4 @@ const getAllSkills = async (req, res, next) => {
   }
 };
 
-module.exports = {
-  getAllSkills,
-};
+export default getAllSkills;
