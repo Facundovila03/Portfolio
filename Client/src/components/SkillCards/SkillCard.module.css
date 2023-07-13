@@ -1,0 +1,47 @@
+.container {
+  border-radius: 12px;
+  background-color: var(--background);
+  z-index: 4;
+  width: 22.063rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  text-align: center;
+}
+.imagen {
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+  top: -3rem;
+}
+.imagen img {
+  border-radius: 50%;
+  z-index: 1;
+  background-color: var(--background);
+  padding: 3px;
+}
+
+.circle {
+  position: absolute;
+}
+
+.skillTitulo {
+  font-size: var(--desktop-M);
+  font-weight: bold;
+  color: var(--accent2);
+  position: relative;
+  top: -3rem;
+}
+
+.skillDescription {
+  font-size: var(--desktop-S);
+  color: var(--text);
+  position: relative;
+  top: -2rem;
+}
