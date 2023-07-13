@@ -4,8 +4,6 @@
   height: max-content;
   width: 100%;
   display: grid;
-  align-items: center;
-  justify-content: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
