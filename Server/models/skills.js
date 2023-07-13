@@ -18,6 +18,10 @@ const skillModel = new Schema({
     type: String,
     require: true,
   },
+  color: {
+    type: String,
+    require: true,
+  },
 });
 
 export default model("Skill", skillModel);
