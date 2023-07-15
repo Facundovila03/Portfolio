@@ -13,6 +13,10 @@ const projectModel = new Schema({
     type: String,
     required: true,
   },
+  link: {
+    type: String,
+    required: true,
+  },
 });
 
 export default model("Project", projectModel);

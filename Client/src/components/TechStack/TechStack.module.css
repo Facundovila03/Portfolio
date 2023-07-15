@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.techStack {
+  display: flex;
+  justify-content: space-evenly;
+  height: auto;
+  padding: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  border: 3px solid var(--accent1);
+}
+.image {
+  height: 145.402px;
+  margin: 0px 0.5rem 0px 0.5rem;
+}
+.text {
+  position: absolute;
+  z-index: 2;
+  top: -2rem;
+  font-size: var(--desktop-2XL);
+  background-color: var(--background);
+  /* background: var(--backgroundAlt); */
+}
