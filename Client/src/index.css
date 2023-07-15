@@ -4,6 +4,9 @@
   margin: 0px;
   padding: 0px;
 
+  color: var(--text);
+  font-family: "Rubik", sans-serif;
+
   --background: #0f193c;
   --accent1: #95c6a8;
   --text: #e7edee;

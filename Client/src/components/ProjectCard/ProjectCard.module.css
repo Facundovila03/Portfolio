@@ -1,0 +1,38 @@
+.container {
+  width: 40%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgAndOverlay {
+  position: relative;
+}
+.imgAndOverlay .image {
+  z-index: 1;
+  aspect-ratio: 16/9;
+  height: 100%;
+  width: 100%;
+}
+.overlay {
+  z-index: 2;
+  aspect-ratio: 16/9;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #0f193c;
+  opacity: 0.4;
+  color: transparent;
+  transition: all 400ms ease-in-out;
+}
+
+.overlay:hover {
+  cursor: pointer;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+}
+
+.container .titulo {
+  font-size: var(--desktop-XL);
+}
