@@ -5,14 +5,70 @@
   background-color: var(--background);
   background: var(--backgroundGradient);
 }
+.data {
+  margin: 13.563rem 4.375rem;
+  height: 100%;
+  width: auto;
+  display: flex;
+}
 .arrow {
   display: flex;
   width: fit-content;
   align-items: center;
-  position: relative;
+  cursor: pointer;
+  position: absolute;
   top: 6.25rem;
   left: 4.375rem;
 }
 .arrow .name {
   font-size: var(--desktop-3XL);
+  cursor: default;
+  color: var(--text);
+}
+.data .imageAndVisit {
+  aspect-ratio: 16/9;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.data .image {
+  width: 100%;
+}
+.description {
+  color: var(--text);
+  font-size: var(--desktop-M);
+  margin-left: 4rem;
+}
+
+.link {
+  margin-top: 3.438rem;
+  background: linear-gradient(
+    90deg,
+    rgba(149, 198, 168, 1) 0%,
+    rgba(149, 198, 168, 1) 100%
+  );
+  text-align: center;
+  font-size: var(--desktop-2XL);
+  text-decoration: none;
+  color: #0f193c;
+
+  width: 50%;
+  padding: 1rem 0rem;
+  border-radius: 10px;
+  transition: all 400ms ease-in-out;
+}
+
+.link:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(149, 198, 168, 1) 0%,
+    rgba(124, 195, 223, 1) 100%
+  );
+  transition: all 400ms ease-in-out;
+}
+.link:hover::after {
+  content: "  \00BB";
+  color: #0f193c;
+  transition: content 400ms ease-in-out;
 }
