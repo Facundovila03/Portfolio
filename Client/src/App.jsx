@@ -5,6 +5,7 @@ import About from "./views/About/About";
 import Skills from "./views/Skills/Skills";
 import Welcome from "./views/Welcome/Welcome";
 import Projects from "./views/Projects/Projects";
+import ContactMe from "./views/Contact me/ContactMe";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Skills />
       <TechStack />
       <Projects />
+      <ContactMe />
     </div>
   );
 }

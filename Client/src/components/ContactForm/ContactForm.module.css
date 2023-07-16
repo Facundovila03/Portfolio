@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formContainer {
+  display: flex;
+  background: #0f193c;
+  width: 40.313rem;
+  height: 40.938rem;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.name,
+.email {
+  align-self: center;
+  width: 80%;
+  height: 3rem;
+}
+.message {
+  align-self: center;
+  width: 80%;
+  height: 13.75rem;
+}
