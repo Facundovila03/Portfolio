@@ -11,7 +11,8 @@ function ProjectDetail() {
   useEffect(() => {
     axios
       .get(`http://localhost:3001/projects/${id}`)
-      .then(({ data }) => setDetail(data));
+      .then(({ data }) => setDetail(data))
+      .then(() => console.log("hola"));
   }, [id]);
 
   return (
@@ -23,11 +24,23 @@ function ProjectDetail() {
         />
         <p className={styles.name}>{detail?.title}</p>
       </div>
-      <img
-        className={styles.image}
-        src={detail?.image}
-        alt={detail?.title}
-      />
+      <div className={styles.data}>
+        <div className={styles.imageAndVisit}>
+          <img
+            className={styles.image}
+            src={detail?.image}
+            alt={detail?.title}
+          />
+          <a
+            className={styles.link}
+            href="https://main--transcendent-puffpuff-9a3f80.netlify.app/#/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Visit
+          </a>
+        </div>
+        <span className={styles.description}>{detail?.description}</span>
+      </div>
     </div>
   );
 }
