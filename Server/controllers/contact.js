@@ -2,9 +2,8 @@ import dotenv from "dotenv";
 dotenv.config();
 import createHttpError from "http-errors";
 import nodemailer from "nodemailer";
-import fs from "fs";
+import html from "../nodemailer/autoReplyHTML.js";
 
-const html = fs.readFileSync("./nodemailer/autoReply.html", "utf8");
 const { TRANSPORTER_PASS } = process.env;
 const transporter = nodemailer.createTransport({
   service: "gmail",
