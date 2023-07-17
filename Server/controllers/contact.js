@@ -1,5 +1,10 @@
+import dotenv from "dotenv";
+dotenv.config();
 import createHttpError from "http-errors";
 import nodemailer from "nodemailer";
+import fs from "fs";
+
+const html = fs.readFileSync("./nodemailer/autoReply.html", "utf8");
 const { TRANSPORTER_PASS } = process.env;
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -25,7 +30,7 @@ export default async function sendMail(req, res, next) {
     from: '"Facundo Vila - Portfolio" <facundovila03@gmail.com>',
     to: from,
     subject: `Thank you ${name}!`,
-    html: "<h1>Muchas gracias por tu mensaje!</h1>",
+    html: html,
   };
   try {
     await transporter.sendMail(mail, (error, info) => {
