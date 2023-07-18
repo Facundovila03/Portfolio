@@ -40,7 +40,7 @@ export default async function sendMail(req, res, next) {
           if (error) {
             throw Error(error);
           } else {
-            res.status(200).json({ message: "Mensaje enviado correctamente!" });
+            res.status(200).json({ message: "Message sent successfully!" });
           }
         });
       }
@@ -49,10 +49,3 @@ export default async function sendMail(req, res, next) {
     next(createHttpError(error));
   }
 }
-
-// await transporter.sendMail({
-//   from: "facundovila03@gmail.com",
-//   to: from,
-//   subject: "Gracias por tu mensaje!",
-//   html: "<h1>Muchas gracias por tu mensaje!</h1>",
-// });
