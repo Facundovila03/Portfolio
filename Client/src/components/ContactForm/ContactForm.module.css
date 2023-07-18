@@ -2,24 +2,106 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 200px;
+  margin-bottom: 100px;
 }
 .formContainer {
   display: flex;
   background: #0f193c;
-  width: 40.313rem;
-  height: 40.938rem;
+  min-width: 40.313rem;
+  min-height: 40.938rem;
+
   align-content: center;
   justify-content: center;
   flex-direction: column;
+  border-radius: 67px;
+  position: relative;
+  box-shadow: 0px 0px 80px 0px rgba(124, 195, 223, 0.65);
 }
-.name,
-.email {
+
+.contactMe {
   align-self: center;
-  width: 80%;
-  height: 3rem;
+  margin: 59px 0 41px 0;
 }
+
+.nameInput,
+.emailInput,
+.messageInput {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1.3rem;
+}
+
+.name,
+.email,
 .message {
   align-self: center;
   width: 80%;
+  height: 3rem;
+  background: #101525;
+  border: 0px;
+  border-radius: 10px;
+  color: var(--text);
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.message {
   height: 13.75rem;
+  resize: none;
+  padding: 15px 0 0 10px;
+}
+
+.inputError,
+.inputErrorMessage {
+  position: absolute;
+  height: 1.875rem;
+  right: 4.68rem;
+  align-self: center;
+  background-color: #101525;
+  border-radius: 50%;
+}
+.inputErrorMessage {
+  align-self: start;
+  top: 1rem;
+}
+.snackbarSuccess {
+  background-color: var(--accent1);
+}
+
+.sendButton {
+  background-color: #101525;
+  border: 0px;
+  height: 2.7rem;
+  width: 80%;
+  align-self: center;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sendIcon {
+  height: 1rem;
+  margin: 0px 1rem;
+}
+
+.sendText {
+  color: var(--text);
+  font-size: var(--desktop-M);
+}
+
+.socials {
+  width: 50px;
+}
+
+.barra {
+  width: 80%;
+  align-self: center;
+  border: 3px solid rgba(16, 21, 37, 0.7);
+  border-radius: 10px;
+  margin: 1.5rem 0 1rem;
 }
