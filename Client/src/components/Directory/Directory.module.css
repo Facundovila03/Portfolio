@@ -20,3 +20,22 @@
   text-align: center;
   align-self: center;
 }
+.opcion {
+  width: fit-content;
+}
+.opcion:hover {
+  cursor: pointer;
+}
+.opcion::after {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 4px;
+  background-color: var(--accent1);
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 300ms ease;
+}
+.opcion:hover::after {
+  transform: scale(1);
+}

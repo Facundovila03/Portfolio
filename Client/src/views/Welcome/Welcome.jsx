@@ -1,7 +1,8 @@
 import Directory from "../../components/Directory/Directory";
 import styles from "../Welcome/Welcome.module.css";
 
-function Welcome() {
+// eslint-disable-next-line react/prop-types
+function Welcome({ references, scrollToSection }) {
   return (
     <div className={styles.container}>
       <div className={styles.welcome}>
@@ -13,7 +14,10 @@ function Welcome() {
           and lets create something amazing together!
         </p>
       </div>
-      <Directory />
+      <Directory
+        references={references}
+        scrollToSection={scrollToSection}
+      />
     </div>
   );
 }

@@ -3,9 +3,14 @@
   padding-bottom: 8rem;
   height: max-content;
   width: 100%;
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
-  grid-row-gap: 10.75rem;
+  grid-row-gap: 10.75rem; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rem;
+  align-items: center;
+  justify-content: center;
 }
