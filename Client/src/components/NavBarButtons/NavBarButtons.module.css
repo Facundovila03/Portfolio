@@ -9,7 +9,18 @@
   padding: 0.938rem 2.188rem;
 }
 .container:hover {
-  border-bottom: 3px solid var(--accent1);
-  transition: border-bottom 200ms;
   cursor: pointer;
+}
+.container::after {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 4px;
+  background-color: var(--accent1);
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 300ms ease;
+}
+.container:hover::after {
+  transform: scale(1);
 }

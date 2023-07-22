@@ -19,3 +19,10 @@
   filter: blur(50px);
   align-self: center;
 }
+.aboutRef,
+.skillsRef,
+.projectsRef,
+.contactMeRef {
+  color: transparent;
+  cursor: default;
+}

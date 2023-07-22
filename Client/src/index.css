@@ -39,3 +39,17 @@
 :root {
   background-color: var(--background);
 }
+:root {
+  &::-webkit-scrollbar {
+    background-color: #182862;
+    border-radius: 5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #182862;
+    border-radius: 5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #2a47ae;
+    border-radius: 5rem;
+  }
+}

@@ -5,7 +5,10 @@ import pfp from "../../assets/Pfp.png";
 function About() {
   return (
     <div className={styles.container}>
-      <img src={pfp} className={styles.imagen} />
+      <img
+        src={pfp}
+        className={styles.imagen}
+      />
       <div className={styles.about}>
         <span>
           I've always been interested in technology and making it fit into every

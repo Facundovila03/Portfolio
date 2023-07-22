@@ -1,8 +1,14 @@
 import styles from "./NavBarButtons.module.css";
 
 // eslint-disable-next-line react/prop-types
-function NavBarButtons({ text }) {
-  return <button className={styles.container}>{text}</button>;
+function NavBarButtons({ text, references, scrollToSection }) {
+  return (
+    <button
+      onClick={() => scrollToSection(references)}
+      className={styles.container}>
+      {text}
+    </button>
+  );
 }
 
 export default NavBarButtons;
