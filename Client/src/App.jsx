@@ -7,14 +7,18 @@ import Skills from "./views/Skills/Skills";
 import Welcome from "./views/Welcome/Welcome";
 import Projects from "./views/Projects/Projects";
 import ContactMe from "./views/Contact me/ContactMe";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { uploadSkills, uploadProjects, uploadTechStack } from "./Redux/actions";
 import useGetSkills from "./hooks/useGetSkills";
 import useGetProjects from "./hooks/useGetProject";
 import useGetTechstack from "./hooks/useGetTechStack";
+import Loader from "./components/loader/loader";
+import { motion } from "framer-motion";
 
 function App() {
+  const [loader, setLoader] = useState(true);
+
   //asking for resources
 
   const dispatch = useDispatch();
@@ -27,6 +31,9 @@ function App() {
     allSkills.length > 1 && dispatch(uploadSkills(allSkills));
     allProjects.length > 0 && dispatch(uploadProjects(allProjects));
     techstack.length > 1 && dispatch(uploadTechStack(techstack));
+    setTimeout(() => {
+      setLoader(false);
+    }, 1200);
   }, [allSkills, allProjects, techstack]);
 
   //scroll to section
@@ -43,8 +50,16 @@ function App() {
     });
   };
 
+  if (loader) {
+    return <Loader />;
+  }
+
   return (
-    <div className="App">
+    <motion.div
+      className="App"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, ease: "easeInOut" }}>
       <Welcome
         scrollToSection={scrollToSection}
         references={{ about, skills, projects, contactMe }}
@@ -79,7 +94,7 @@ function App() {
         .
       </div>
       <ContactMe />
-    </div>
+    </motion.div>
   );
 }
 
