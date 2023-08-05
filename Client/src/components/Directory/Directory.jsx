@@ -2,7 +2,6 @@
 import styles from "./Directory.module.css";
 
 function Directory({ references, scrollToSection }) {
-  console.log(references);
   return (
     <div className={styles.container}>
       <div className={styles.opciones}>

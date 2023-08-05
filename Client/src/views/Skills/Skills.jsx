@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 function Skills() {
   const skills = useSelector((state) => state.skills);
-  console.log(skills);
   return (
     <div className={styles.container}>
       <English />

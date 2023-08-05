@@ -12,28 +12,19 @@ export const uploadProjects = (arg) => {
   };
 };
 
-export const uploadTechStack = () => {
-  let payload;
-  axios
-    .get("http://localhost:3001/techstack")
-    .then(({ data }) => (payload = data))
-    .then(() => console.log(payload));
+export const uploadTechStack = (arg) => {
   return {
     type: GET_TECHSTACK,
-    payload: payload,
+    payload: arg,
   };
 };
 
 export const getProjectDetail = (id) => {
   let payload = {};
   if (id) {
-    axios
-      .get(`http://localhost:3001/projects/${id}`)
-      .then(({ data }) => {
-        payload = data;
-      })
-      .then(() => console.log(payload))
-      .then(() => console.log(payload));
+    axios.get(`http://localhost:3001/projects/${id}`).then(({ data }) => {
+      payload = data;
+    });
 
     return {
       type: GET_PROJECT_DETAIL,
@@ -48,7 +39,6 @@ export const getProjectDetail = (id) => {
 };
 
 export const uploadSkills = (arg) => {
-  console.log(arg);
   return {
     type: GET_SKILLS,
     payload: arg,
