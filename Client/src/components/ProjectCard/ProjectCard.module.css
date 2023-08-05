@@ -36,3 +36,12 @@
 .container .titulo {
   font-size: var(--desktop-XL);
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 50%;
+  }
+  .container .titulo {
+    font-size: var(--mobile-XL);
+  }
+}

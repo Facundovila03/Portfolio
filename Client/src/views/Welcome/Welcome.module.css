@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   margin-right: 10%;
+  align-items: center;
 }
 
 .backgroundClip {
@@ -21,6 +22,7 @@
   -webkit-background-clip: text;
   background-clip: text;
 }
+
 .backgroundClip span {
   font-size: 15rem;
   font-family: "Foldit", cursive;
@@ -42,5 +44,27 @@
   }
   .backgroundClip span {
     font-size: 12rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container p {
+    text-align: center;
+    font-size: var(--mobile-L);
+  }
+  .container {
+    width: fit-content;
+    margin: 10%;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+  .container p {
+    font-size: var(--mobile-XL);
+  }
+  .container {
+    margin-left: 0;
+    align-self: center;
+    margin: 10%;
   }
 }

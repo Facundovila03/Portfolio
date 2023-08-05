@@ -114,3 +114,18 @@
     scale: 80%;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    margin-bottom: -20px;
+  }
+  .formContainer {
+    scale: 70%;
+  }
+}
