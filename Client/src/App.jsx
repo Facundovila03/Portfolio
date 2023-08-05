@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "./App.css";
 import NavBar from "./components/Navbar/NavBar";
 import TechStack from "./components/TechStack/TechStack";
@@ -6,9 +7,30 @@ import Skills from "./views/Skills/Skills";
 import Welcome from "./views/Welcome/Welcome";
 import Projects from "./views/Projects/Projects";
 import ContactMe from "./views/Contact me/ContactMe";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { useDispatch } from "react-redux";
+import { uploadSkills, uploadProjects, uploadTechStack } from "./Redux/actions";
+import useGetSkills from "./hooks/useGetSkills";
+import useGetProjects from "./hooks/useGetProject";
+import useGetTechstack from "./hooks/useGetTechStack";
 
 function App() {
+  //asking for resources
+
+  const dispatch = useDispatch();
+
+  const [allSkills] = useGetSkills();
+  const [allProjects] = useGetProjects();
+  const [techstack] = useGetTechstack();
+
+  useEffect(() => {
+    allSkills.length > 1 && dispatch(uploadSkills(allSkills));
+    allProjects.length > 0 && dispatch(uploadProjects(allProjects));
+    techstack.length > 1 && dispatch(uploadTechStack(techstack));
+  }, [allSkills, allProjects, techstack]);
+
+  //scroll to section
+
   const about = useRef(null);
   const skills = useRef(null);
   const projects = useRef(null);
@@ -35,26 +57,26 @@ function App() {
       <div
         className="aboutRef"
         ref={about}>
-        about reference
+        .
       </div>
       <About />
       <div
         className="skillsRef"
         ref={skills}>
-        skills reference
+        .
       </div>
       <Skills />
       <TechStack />
       <div
         className="projectsRef"
         ref={projects}>
-        projects reference
+        .
       </div>
       <Projects />
       <div
         className="contactMeRef"
         ref={contactMe}>
-        contactMe reference
+        .
       </div>
       <ContactMe />
     </div>

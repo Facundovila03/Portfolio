@@ -7,6 +7,7 @@ const getAllSkills = async (req, res, next) => {
     if (!skills.length) throw Error("no skills found");
     res.status(200).json(skills);
   } catch (error) {
+    console.log("hola este es un error");
     next(createHttpError(error));
   }
 };

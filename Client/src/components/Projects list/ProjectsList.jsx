@@ -1,16 +1,12 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import styles from "./ProjectsList.module.css";
-import axios from "axios";
+// import axios from "axios";
 import ProjectCard from "../ProjectCard/ProjectCard";
+import { useSelector } from "react-redux";
 
 function ProjectsList() {
-  const [projects, setProjects] = useState([]);
+  const projects = useSelector((state) => state.projects);
 
-  useEffect(() => {
-    axios.get("http://localhost:3001/projects").then(({ data }) => {
-      setProjects(data);
-    });
-  }, []);
   return (
     <div className={styles.container}>
       {projects.length &&
