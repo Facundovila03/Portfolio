@@ -25,4 +25,6 @@
 .contactMeRef {
   color: transparent;
   cursor: default;
+  width: 1px;
+  user-select: none;
 }

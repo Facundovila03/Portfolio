@@ -1,17 +1,11 @@
-import { useEffect, useState } from "react";
 import SkillCard from "../../components/SkillCards/SkillCard";
 import styles from "./Skills.module.css";
-import axios from "axios";
 import English from "../../components/SkillCards/English/english.jsx";
+import { useSelector } from "react-redux";
 
 function Skills() {
-  const [skills, setSkills] = useState([]);
-  useEffect(() => {
-    axios.get("http://localhost:3001/skills").then(({ data }) => {
-      setSkills(data);
-    });
-  }, []);
-
+  const skills = useSelector((state) => state.skills);
+  console.log(skills);
   return (
     <div className={styles.container}>
       <English />
