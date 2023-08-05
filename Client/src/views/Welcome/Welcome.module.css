@@ -34,3 +34,13 @@
   width: 95%;
   font-size: var(--desktop-L);
 }
+
+@media screen and (max-width: 1440px) {
+  .welcome {
+    width: 40rem;
+    margin-right: 3rem;
+  }
+  .backgroundClip span {
+    font-size: 12rem;
+  }
+}
