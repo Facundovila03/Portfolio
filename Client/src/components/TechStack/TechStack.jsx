@@ -1,15 +1,8 @@
-import { useEffect, useState } from "react";
 import styles from "./TechStack.module.css";
-import axios from "axios";
+import { useSelector } from "react-redux";
 
 function TechStack() {
-  const [techs, setTechs] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:3001/techstack")
-      .then(({ data }) => setTechs(data));
-  }, []);
+  const techs = useSelector((state) => state.techStack);
 
   return (
     <div className={styles.container}>
