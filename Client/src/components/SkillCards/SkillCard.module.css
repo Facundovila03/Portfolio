@@ -49,5 +49,22 @@
 @media screen and (max-width: 1024px) {
   .container {
     width: 16rem;
+    height: 10rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    width: 10rem;
+    padding: 0.5rem;
+  }
+  .skillDescription {
+    font-size: var(--mobile-S);
+    top: -1rem;
+  }
+  .skillTitulo {
+    font-size: var(--mobile-M);
+  }
+  .imagen {
+    top: -3rem;
   }
 }

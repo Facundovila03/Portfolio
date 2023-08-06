@@ -45,3 +45,9 @@
     font-size: var(--mobile-XL);
   }
 }
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 60%;
+  }
+}

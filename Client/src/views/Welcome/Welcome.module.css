@@ -47,6 +47,8 @@
   }
 }
 
+/* media queries for ipad*/
+
 @media screen and (max-width: 1024px) {
   .container p {
     text-align: center;
@@ -66,5 +68,28 @@
     margin-left: 0;
     align-self: center;
     margin: 10%;
+  }
+}
+
+/* media queries for iphone*/
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .welcome {
+    margin: 0px;
+    width: 90%;
+  }
+  .container span {
+    font-size: 6rem;
+  }
+  .container p {
+    font-size: var(--mobile-L);
   }
 }

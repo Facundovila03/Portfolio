@@ -44,3 +44,24 @@
     width: 15rem;
   }
 }
+@media screen and (max-width: 900px) {
+  .container {
+    width: 10rem;
+    height: 10rem;
+    padding: 0.5rem;
+  }
+  .DescriptionEnglish {
+    font-size: var(--mobile-S);
+    top: -1rem;
+  }
+  .TituloEnglish {
+    font-size: var(--mobile-M);
+  }
+  .imagen img {
+    height: 75px;
+    width: 60px;
+  }
+  .imagen {
+    top: -3rem;
+  }
+}

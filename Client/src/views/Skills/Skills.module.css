@@ -16,3 +16,10 @@
     gap: 5rem;
   }
 }
+@media screen and (max-width: 900px) {
+  .container {
+    gap: 2rem;
+    row-gap: 6rem;
+    margin-top: 13rem;
+  }
+}

@@ -9,3 +9,14 @@
   margin-bottom: 6.563rem;
   font-size: var(--desktop-S);
 }
+
+@media screen and (max-width: 900px) {
+  .texto {
+    font-size: var(--mobile-S);
+    width: 80%;
+    text-align: center;
+  }
+  .container {
+    margin-bottom: 10rem;
+  }
+}

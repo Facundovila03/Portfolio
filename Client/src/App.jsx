@@ -15,6 +15,7 @@ import useGetProjects from "./hooks/useGetProject";
 import useGetTechstack from "./hooks/useGetTechStack";
 import Loader from "./components/loader/loader";
 import { motion } from "framer-motion";
+import MenuMobile from "./components/MenuMobile/menuMobile";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -44,9 +45,10 @@ function App() {
   const contactMe = useRef(null);
 
   const scrollToSection = (elementRef) => {
-    window.scrollTo({
-      top: elementRef.current.offsetTop,
+    elementRef.current.scrollIntoView({
       behavior: "smooth",
+      block: "start",
+      inline: "nearest",
     });
   };
 
@@ -61,6 +63,10 @@ function App() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeInOut" }}>
       <Welcome
+        scrollToSection={scrollToSection}
+        references={{ about, skills, projects, contactMe }}
+      />
+      <MenuMobile
         scrollToSection={scrollToSection}
         references={{ about, skills, projects, contactMe }}
       />
