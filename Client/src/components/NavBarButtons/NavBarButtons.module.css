@@ -24,3 +24,10 @@
 .container:hover::after {
   transform: scale(1);
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    font-size: var(--mobile-L);
+    padding: 0.938rem 1.188rem;
+  }
+}

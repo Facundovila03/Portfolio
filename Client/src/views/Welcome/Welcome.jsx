@@ -17,6 +17,7 @@ function Welcome({ references, scrollToSection }) {
       <Directory
         references={references}
         scrollToSection={scrollToSection}
+        className={styles.directory}
       />
     </div>
   );

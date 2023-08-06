@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   margin-right: 10%;
+  align-items: center;
 }
 
 .backgroundClip {
@@ -21,6 +22,7 @@
   -webkit-background-clip: text;
   background-clip: text;
 }
+
 .backgroundClip span {
   font-size: 15rem;
   font-family: "Foldit", cursive;
@@ -33,4 +35,61 @@
 .container p {
   width: 95%;
   font-size: var(--desktop-L);
+}
+
+@media screen and (max-width: 1440px) {
+  .welcome {
+    width: 40rem;
+    margin-right: 3rem;
+  }
+  .backgroundClip span {
+    font-size: 12rem;
+  }
+}
+
+/* media queries for ipad*/
+
+@media screen and (max-width: 1024px) {
+  .container p {
+    text-align: center;
+    font-size: var(--mobile-L);
+  }
+  .container {
+    width: fit-content;
+    margin: 10%;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+  .container p {
+    font-size: var(--mobile-XL);
+  }
+  .container {
+    margin-left: 0;
+    align-self: center;
+    margin: 10%;
+  }
+}
+
+/* media queries for iphone*/
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .welcome {
+    margin: 0px;
+    width: 90%;
+  }
+  .container span {
+    font-size: 6rem;
+  }
+  .container p {
+    font-size: var(--mobile-L);
+  }
 }

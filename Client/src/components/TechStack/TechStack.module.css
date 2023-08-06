@@ -23,5 +23,25 @@
   top: -2rem;
   font-size: var(--desktop-2XL);
   background-color: var(--background);
-  /* background: var(--backgroundAlt); */
+}
+
+@media screen and (max-width: 1024px) {
+  .techStack {
+    padding: 2rem;
+    width: 80%;
+  }
+  .image {
+    height: 120px;
+    margin: 0.7rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .techStack {
+    padding: 1.5rem;
+    width: 80%;
+  }
+  .image {
+    height: 90px;
+    margin: 0.4rem;
+  }
 }

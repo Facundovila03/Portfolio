@@ -11,7 +11,6 @@
   background: #0f193c;
   min-width: 40.313rem;
   min-height: 40.938rem;
-
   align-content: center;
   justify-content: center;
   flex-direction: column;
@@ -104,4 +103,34 @@
   border: 3px solid rgba(16, 21, 37, 0.7);
   border-radius: 10px;
   margin: 1.5rem 0 1rem;
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    margin-bottom: 50px;
+  }
+  .formContainer {
+    scale: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    margin-bottom: -20px;
+  }
+  .formContainer {
+    scale: 70%;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: portrait) {
+  .container {
+    margin-top: 50px;
+  }
 }

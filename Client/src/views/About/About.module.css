@@ -44,3 +44,19 @@
   font-family: "Rubik", sans-serif;
   text-align: center;
 }
+
+@media screen and (max-width: 1024px) {
+  .about {
+    font-size: var(--mobile-L);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about {
+    font-size: var(--mobile-M);
+    padding: 7rem 0 2rem;
+  }
+  .imagen {
+    scale: 80%;
+  }
+}
