@@ -72,3 +72,53 @@
   color: #0f193c;
   transition: content 400ms ease-in-out;
 }
+
+@media screen and (max-width: 1024px) {
+  .arrow .name {
+    font-size: var(--mobile-3XL);
+  }
+  .data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .data .imageAndVisit {
+    width: 80%;
+    align-self: center;
+  }
+  .link {
+    font-size: var(--mobile-2XL);
+    padding: 0.5rem 0;
+    margin-top: 2rem;
+  }
+  .description {
+    margin-top: 2rem;
+    text-align: center;
+    align-self: center;
+    margin-left: 0;
+    font-size: var(--mobile-L);
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .arrow {
+    left: 2rem;
+  }
+  .data {
+    margin-top: 12rem;
+  }
+  .arrow .name {
+    font-size: var(--mobile-2XL);
+  }
+  .data .imageAndVisit {
+    width: 100%;
+  }
+  .link {
+    font-size: var(--mobile-XL);
+  }
+  .description {
+    margin-top: 1rem;
+    font-size: var(--mobile-M);
+  }
+}

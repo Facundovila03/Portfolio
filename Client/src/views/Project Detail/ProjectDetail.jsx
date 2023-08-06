@@ -1,19 +1,30 @@
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import styles from "./ProjectDetail.module.css";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import useGetProjectDetail from "../../hooks/useGetProjectDetail";
+import { uploadProjectDetail } from "../../Redux/actions";
+import Loader from "../../components/loader/loader";
 
 function ProjectDetail() {
   const { id } = useParams();
-  const [detail, setDetail] = useState(null);
+  const dispatch = useDispatch();
+  const detail = useSelector((state) => state.projectDetail);
+
+  const ProjectDetail = useGetProjectDetail(id);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:3001/projects/${id}`)
-      .then(({ data }) => setDetail(data))
-      .then(() => console.log("hola"));
-  }, [id]);
+    Object.keys(ProjectDetail).length > 0 &&
+      dispatch(uploadProjectDetail(ProjectDetail));
+    return () => {
+      dispatch(uploadProjectDetail({}));
+    };
+  }, [ProjectDetail]);
+
+  if (Object.keys(detail).length === 0) {
+    return <Loader />;
+  }
 
   return (
     <div className={styles.container}>
