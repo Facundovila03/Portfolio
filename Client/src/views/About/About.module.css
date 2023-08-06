@@ -52,6 +52,9 @@
 }
 
 @media screen and (max-width: 900px) {
+  .container {
+    margin-top: 15rem;
+  }
   .about {
     font-size: var(--mobile-M);
     padding: 7rem 0 2rem;

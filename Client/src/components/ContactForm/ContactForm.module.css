@@ -132,5 +132,15 @@
 @media screen and (max-width: 900px) and (orientation: portrait) {
   .container {
     margin-top: 50px;
+    scale: 70%;
+    margin-bottom: 50px;
+  }
+  .name,
+  .message,
+  .email {
+    font-size: var(--mobile-L);
+  }
+  .message::placeholder::after {
+    content: " (at least 10 characters)";
   }
 }
